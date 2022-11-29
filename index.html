@@ -1,58 +1,77 @@
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        
-        <div class="container">
-           
-            <div class="teams-container">
-                <div>
-                    <h3 class="team-name" id="home">HOME</h3>
-                        <div class="score-state border-light-blue" id="home-score">
-                            <span class="score" id="home-el">0</span> 
-                         </div>
-                     <button class="btn btn-score " onclick="addOneHome()" id="btn-home">+1</button>
-                 </div>
-           
-             <div>
-                <h3 class="team-name" id="guest">GUEST</h3>
-                   <div class="score-state border-light-blue" id="guest-score">
-                        <span class="score" id="guest-el">0</span> 
-                   </div>
-                      <button class="btn btn-score " onclick="addOneGuest()" id="btn-guest">+1</button>
-                    </div>
-            </div>
-            
-            <div class="state-container">
-                <div >
-                    <h3 class="time-name">TIME</h3>
-                     <div class="time-state">
-                         <span class="time gray" id="time-el" >00:00:00</span> 
-                    </div>  
-                </div>   
-               
-                <div >
-                    <h3 class="period-name">PERIOD</h3>
-                    <div class="period-state">
-                          <span class="period gray" id="period-el">0</span> 
-                     </div>  
-                    <div class="periods-options">
-                      <button class="btn" onclick="periodOne()" id="btn-period-one">1</button>
-                      <button class="btn" onclick="periodTwo()" id="btn-period-two">2</button> 
-                    </div>  
-               </div>
-            </div>
-            
-             <div class="scoreboard-actions">
-                 <button class="btn btn-action"  onclick="start()" id="start">Start Game</button>
-                 <button class="btn btn-action" onclick="stop()" id="stop">Stop Game</button>
-                 <button class="btn btn-action" onclick="resetGame()" id="reset">Reset Game</button>
-            </div>   
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="teams-container">
+        <div>
+          <h3 class="team-name" id="home">HOME</h3>
+          <div class="score-state border-light-blue" id="home-score">
+            <span class="score" id="home-el">0</span>
+          </div>
+          <button class="btn btn-score" onclick="addOneHome()" id="btn-home">
+            +1
+          </button>
         </div>
-        <script src="index.js"></script>
-    </body>
+
+        <div>
+          <h3 class="team-name" id="guest">AWAY</h3>
+          <div class="score-state border-light-blue" id="guest-score">
+            <span class="score" id="guest-el">0</span>
+          </div>
+          <button class="btn btn-score" onclick="addOneGuest()" id="btn-guest">
+            +1
+          </button>
+        </div>
+      </div>
+
+      <div class="state-container">
+        <div>
+          <h3 class="time-name">TIME</h3>
+          <div class="time-state">
+            <span class="time gray" id="time-el">00:00:00</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="period-name">PERIOD</h3>
+          <div class="period-state">
+            <span class="period gray" id="period-el">0</span>
+          </div>
+          <div class="periods-options">
+            <button class="btn" onclick="periodOne()" id="btn-period-one">
+              1
+            </button>
+            <button class="btn" onclick="periodTwo()" id="btn-period-two">
+              2
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="scoreboard-actions">
+        <button class="btn btn-action" onclick="start()" id="start">
+          Start Game
+        </button>
+        <button class="btn btn-action" onclick="stop()" id="stop">
+          Stop Game
+        </button>
+        <button class="btn btn-action" onclick="resetGame()" id="reset">
+          Reset Game
+        </button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
